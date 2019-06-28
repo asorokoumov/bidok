@@ -27,6 +27,7 @@ class Bid (models.Model):
     order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
     name = models.TextField(default=None, blank=True, null=True)
     phone = models.TextField(default=None, blank=True, null=True)
+    comment = models.TextField(default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -7,7 +7,7 @@ from collector.models import Order, Bid
 def order(request, number):
     order = Order.objects.get(number=number)
     if request.method == "POST":
-        bid = Bid(order_id=order, name=request.POST['name'], phone=request.POST['phone'])
+        bid = Bid(order_id=order, name=request.POST['name'], phone=request.POST['phone'], comment=request.POST['comment'])
         bid.save()
         return render(request, 'collector/order_taken.html', {'order': order})
     else:
