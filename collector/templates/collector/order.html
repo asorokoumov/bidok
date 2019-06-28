@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="page" lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta content="notranslate" name="google">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico"> -->
+    <meta name="theme-color" content="#fff">
+    <meta name="msapplication-navbutton-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+    <title>Order page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="preload" href="{% static 'js/app.js' %}" as="script">
+  </head>
+  <body>
+    <div class="mobile-menu">
+      <header class="mobile-menu__header">
+        <button class="mobile-menu__close">
+          <img src="./Order page_files/mobile-close.svg" alt="">
+        </button>
+        <a href="Order page (taken).htm" class="logo  logo--mobile">
+          <img src="./Order page_files/logo-mobile.svg" alt="">
+        </a>
+        <div class="page-header__notifications">
+          <img src="./Order page_files/notifications.svg" alt="">
+        </div>
+      </header>
+      <nav class="mobile-menu__nav">
+      </nav>
+    </div>
+    <div class="page__inner">
+      <div id="filters" class="popup  popup--filters  zoom-anim-dialog  mfp-hide">
+        <button class="popup__clear  popup-close">Очистить все</button>
+        <div class="popup__inner">
+          <div>
+            <div class="collapsible  collapsible--full  is-open">
+              <div class="collapsible__toggle">Ставка, ₽ за т·км</div>
+              <div class="collapsible__inner">
+                <div class="range-slider noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(20%, 0px) scale(0.6, 1);"></div></div><div class="noUi-origin" style="transform: translate(-80%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="80.0" aria-valuenow="20.0" aria-valuetext="20.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-20%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="20.0" aria-valuemax="100.0" aria-valuenow="80.0" aria-valuetext="80.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                <div class="filters__values">
+                  <div class="filters__value">
+                    <span class="filters__value-text">от</span>
+                    <input type="text" class="filters__value-input" value="2,00₽">
+                  </div>
+                  <div class="filters__value">
+                    <span class="filters__value-text">до</span>
+                    <input type="text" class="filters__value-input" value="6,20₽">
+                  </div>
+                </div>
+                <div class="filters__actions">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="collapsible  collapsible--full">
+              <div class="collapsible__toggle">
+                <span>расстояние, км</span>
+                <span class="counter">
+                  <span class="counter__number">1</span>
+                </span>
+              </div>
+              <div class="collapsible__inner">
+                <div class="range-slider noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(20%, 0px) scale(0.6, 1);"></div></div><div class="noUi-origin" style="transform: translate(-80%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="80.0" aria-valuenow="20.0" aria-valuetext="20.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-20%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="20.0" aria-valuemax="100.0" aria-valuenow="80.0" aria-valuetext="80.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                <div class="filters__values">
+                  <div class="filters__value">
+                    <span class="filters__value-text">от</span>
+                    <input type="text" class="filters__value-input" value="2 км">
+                  </div>
+                  <div class="filters__value">
+                    <span class="filters__value-text">до</span>
+                    <input type="text" class="filters__value-input" value="28 км">
+                  </div>
+                </div>
+                <div class="filters__actions">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="collapsible  collapsible--full  is-open">
+              <div class="collapsible__toggle">тип груза</div>
+              <div class="collapsible__inner">
+                <div class="filters__list-wrap">
+                  <div class="filters__list">
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Известь</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Зерно</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Щебень</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Металлопродукты</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Асфальт</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Пшеница</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Известь</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Зерно</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Щебень</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0" checked="">
+                          <span class="field-checkbox__text">Металлопродукты</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Асфальт</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap">
+                        <label class="field-checkbox__name">
+                          <input class="field-checkbox__input" type="checkbox" name="check0">
+                          <span class="field-checkbox__text">Пшеница</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__actions  filters__actions--m0">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="collapsible  collapsible--full">
+              <div class="collapsible__toggle">объем груза, т</div>
+              <div class="collapsible__inner">
+                <div class="range-slider noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(20%, 0px) scale(0.6, 1);"></div></div><div class="noUi-origin" style="transform: translate(-80%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="80.0" aria-valuenow="20.0" aria-valuetext="20.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-20%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="20.0" aria-valuemax="100.0" aria-valuenow="80.0" aria-valuetext="80.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                <div class="filters__values">
+                  <div class="filters__value">
+                    <span class="filters__value-text">от</span>
+                    <input type="text" class="filters__value-input" value="13т">
+                  </div>
+                  <div class="filters__value">
+                    <span class="filters__value-text">до</span>
+                    <input type="text" class="filters__value-input" value="37т">
+                  </div>
+                </div>
+                <div class="filters__actions">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="collapsible  collapsible--full  is-open">
+              <div class="collapsible__toggle">точка загрузки</div>
+              <div class="collapsible__inner">
+                <div class="field-select  field-select--small  field-select--search  filters__select" data-placeholder="Выберите город">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                      <option data-select2-id="3"></option>
+                      <option value="Москва">Москва</option>
+                      <option value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option value="Новосибирск">Новосибирск</option>
+                      <option value="Екатеринбург">Екатеринбург</option>
+                      <option value="Нижний Новгород">Нижний Новгород</option>
+                      <option value="Казань">Казань</option>
+                      <option value="Челябинск">Челябинск</option>
+                      <option value="Омск">Омск</option>
+                      <option value="Самара">Самара</option>
+                      <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single select2--small" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-z123-container"><span class="select2-selection__rendered" id="select2-z123-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Выберите город</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                </div>
+                <div class="range-slider noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(20%, 0px) scale(0.6, 1);"></div></div><div class="noUi-origin" style="transform: translate(-80%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="80.0" aria-valuenow="20.0" aria-valuetext="20.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-20%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="20.0" aria-valuemax="100.0" aria-valuenow="80.0" aria-valuetext="80.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                <div class="filters__values">
+                  <div class="filters__value">
+                    <input type="text" class="filters__value-input" value="140 км">
+                    <span class="filters__value-text">радиус поиска</span>
+                  </div>
+                </div>
+                <div class="filters__actions">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="collapsible  collapsible--full">
+              <div class="collapsible__toggle">точка выгрузки</div>
+              <div class="collapsible__inner">
+                <div class="field-select  field-select--small  field-select--search filters__select" data-placeholder="Выберите город">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select select2-hidden-accessible" data-select2-id="4" tabindex="-1" aria-hidden="true">
+                      <option data-select2-id="6"></option>
+                      <option value="Москва">Москва</option>
+                      <option value="Санкт-Петербург">Санкт-Петербург</option>
+                      <option value="Новосибирск">Новосибирск</option>
+                      <option value="Екатеринбург">Екатеринбург</option>
+                      <option value="Нижний Новгород">Нижний Новгород</option>
+                      <option value="Казань">Казань</option>
+                      <option value="Челябинск">Челябинск</option>
+                      <option value="Омск">Омск</option>
+                      <option value="Самара">Самара</option>
+                      <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single select2--small" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-at6t-container"><span class="select2-selection__rendered" id="select2-at6t-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Выберите город</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                </div>
+                <div class="range-slider noUi-target noUi-ltr noUi-horizontal"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(20%, 0px) scale(0.6, 1);"></div></div><div class="noUi-origin" style="transform: translate(-80%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="80.0" aria-valuenow="20.0" aria-valuetext="20.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(-20%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="20.0" aria-valuemax="100.0" aria-valuenow="80.0" aria-valuetext="80.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                <div class="filters__values">
+                  <div class="filters__value">
+                    <input type="text" class="filters__value-input" value="14 км">
+                    <span class="filters__value-text">радиус поиска</span>
+                  </div>
+                </div>
+                <div class="filters__actions">
+                  <a href="https://smilecraft.cc/trucker/order-page.html#" class="link">
+                    <span class="link__text">Очистить</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__bottom  is-active">
+          <button class="btn  btn--full  btn--no-border-radius  popup-close">Применить фильтры (3)</button>
+        </div>
+      </div>
+
+      <main class="page__content">
+        <div class="container">
+          <div class="order-page">
+            <div class="row">
+              <div class="col-md-12  col-lg-8  order-page__details">
+                <div class="order-page__details-group">
+                  <h2 class="order-page__header">Маршрут</h2>
+                  <div class="routes">
+                    <div class="routes__points">
+                      <div class="routes__points-item">
+                        <div class="routes__pin  routes__pin--blue">А</div>
+                      </div>
+                      <div class="routes__points-item">
+                        <div class="routes__pin  routes__pin--red">Б</div>
+                      </div>
+                    </div>
+                    <div class="routes__addresses">
+                      <div class="routes__address">{{order.address_from}}</div>
+                      <div class="routes__address">{{order.address_to}}</div>
+                    </div>
+                  </div>
+                  <div class="collapsible  collapsible--bigger">
+                    <div class="collapsible__toggle">
+                      <span>
+                        <img src="./Order page_files/map.svg" alt="">
+                      </span>
+                      <span>Показать карту</span>
+                    </div>
+                    <div class="collapsible__inner">
+                      <div class="order-page__map">
+                          <iframe src="{{order.map}}" width=100% height=400 frameborder="0" allowfullscreen="true"></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="order-page__details-group">
+                  <div class="order-page__comment">
+                    <h3 class="order-page__comment-header">Комментарий</h3>
+                    <div class="order-page__comment-content">
+                      <p>{{order.comment}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-page__details-group">
+                  <div class="order-page__comment">
+                    <h3 class="order-page__comment-header">Информация по заказу</h3>
+                    <div class="order-page__comment-content">
+                      <p>{{order.logist}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12  col-lg-4  order-page__summary">
+                <div class="order-page__summary-inner">
+                  <div class="order-page__summary-group">
+                    <div class="meta  meta--page">
+                      <span class="meta__item  meta__item--number">
+                        <span class="meta__space">№{{order.number}}</span>
+                      </span>
+                      <span class="meta__item">
+                        <span class="meta__pill  meta__grass">Поиск перевозчиков</span>
+                      </span>
+                    </div>
+                    <div class="summary">
+                      <div class="summary__item">
+                        <div class="summary__header">ставка</div>
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.rate|floatformat}}₽ <small>за т·км</small></div>
+                        </div>
+                      </div>
+                      <div class="summary__item">
+                        <div class="summary__header">дистанция</div>
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.distance|floatformat}}км</div>
+                        </div>
+                      </div>
+                      <div class="summary__item">
+                        <div class="summary__header">даты погрузки</div>
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.pickup_date}}</div>
+                        </div>
+                      </div>
+                      <div class="summary__item">
+                        <div class="summary__header">груз</div>
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.weight|floatformat}}т</div>
+                          <div class="summary__ps">{{order.cargo_type}}, {{order.cargo_count|floatformat}} шт</div>
+                        </div>
+                      </div>
+                      <div class="summary__item">
+                        <div class="summary__header">Кузов</div>
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.car_type}}</div>
+                        </div>
+                      </div>
+                      <div class="summary__item  summary__item--price">
+                        <div class="summary__content">
+                          <div class="summary__text">{{order.price|floatformat}}₽</div>
+                          <div class="summary__ps">20% НДС</div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="." method="post">
+                        {% csrf_token %}
+                    <div class="order-page__summary-actions">
+                    <input type="text" class="form-control" name="name" placeholder="Имя" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="order-page__summary-actions">
+                    <input type="text" class="form-control" name="phone" placeholder="Телефон" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="order-page__summary-actions">
+                      <button href="Order page (taken).htm" class="btn  btn--full"  type="submit">Хочу взять заказ</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="page__footer-wrapper">
+        <footer class="page-footer"></footer>
+      </div>
+    </div>
+    <script src="{% static 'js/app.js' %}"></script>
+
+
+</body></html>
