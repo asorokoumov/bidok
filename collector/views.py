@@ -47,8 +47,6 @@ def write_event(event, order_id):
                '}' \
                ']}'
 
-    print (data_raw)
     data = json.loads(data_raw)
-    print (data)
     response = requests.post(url, data=json.dumps(data), headers=headers)
 
