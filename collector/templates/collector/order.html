@@ -17,22 +17,6 @@
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <link rel="preload" href="{% static 'js/app.js' %}" as="script">
   </head>
-  <body>
-    <div class="mobile-menu">
-      <header class="mobile-menu__header">
-        <button class="mobile-menu__close">
-          <img src="./Order page_files/mobile-close.svg" alt="">
-        </button>
-        <a href="Order page (taken).htm" class="logo  logo--mobile">
-          <img src="./Order page_files/logo-mobile.svg" alt="">
-        </a>
-        <div class="page-header__notifications">
-          <img src="./Order page_files/notifications.svg" alt="">
-        </div>
-      </header>
-      <nav class="mobile-menu__nav">
-      </nav>
-    </div>
     <div class="page__inner">
 
 
@@ -60,7 +44,7 @@
                   <div class="collapsible  collapsible--bigger">
                     <div class="collapsible__toggle">
                       <span>
-                        <img src="./Order page_files/map.svg" alt="">
+                        <img src="{% static 'img/map.svg' %}" alt="">
                       </span>
                       <span>Показать карту</span>
                     </div>
@@ -135,7 +119,7 @@
                       <div class="summary__item  summary__item--price">
                         <div class="summary__content">
                           <div class="summary__text">{{order.price|floatformat}}₽</div>
-                          <div class="summary__ps">20% НДС</div>
+                          <div class="summary__ps">включая 20% НДС</div>
                         </div>
                       </div>
                     </div>
