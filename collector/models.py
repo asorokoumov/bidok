@@ -18,6 +18,7 @@ class Order (models.Model):
     comment = models.TextField(default=None, blank=True, null=True)
     logist = models.TextField(default=None, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    vat = models.IntegerField(default=None, blank=True, null=True)
 
     def __str__(self):
         return self.number

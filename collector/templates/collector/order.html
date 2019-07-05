@@ -134,7 +134,16 @@
                       <div class="summary__item  summary__item--price">
                         <div class="summary__content">
                           <div class="summary__text">{{order.price|floatformat}}₽</div>
+                          {%if order.vat == 20%}
                           <div class="summary__ps">включая 20% НДС</div>
+                          {%endif%}
+                          {%if order.vat == 0%}
+                          <div class="summary__ps">включая 0% НДС</div>
+                          {%endif%}
+                          {%if order.vat == -1%}
+                          <div class="summary__ps">без НДС</div>
+                          {%endif%}
+
                         </div>
                       </div>
                     </div>
